@@ -1,0 +1,35 @@
+*, *:before, *:after{
+	padding:0;
+	margin:0;
+	border:0;
+	box-sizing:border-box;
+}
+html, body{
+	height:100%;
+	font-size:14px;
+	color: $c1;
+	line-height:1.5;
+	font-family: "M PLUS Rounded 1c", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+	background-color:$c0;
+}
+h1, h2, h3, h4, h5, h6{
+	font-size:inherit;
+	font-weight:normal;
+}
+a{
+	text-decoration:none;
+	@include transition;
+}
+input, button, textarea{
+	font-family:inherit;
+}
+button{
+	cursor: pointer;
+	@include transition;
+}
+.wrapper{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}

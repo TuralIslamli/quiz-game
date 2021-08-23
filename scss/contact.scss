@@ -1,0 +1,16 @@
+@import "_fonts";
+$c0:#ffffff;
+$c1:#DC5866;
+@import "_mixin";
+@import "_nullstyle";
+@import "_header";
+.main{
+    flex: 1 1 auto;
+    padding: 100px 20px 10px;
+    &__title{
+        text-align: center;
+        font-size: 48px;
+    }
+}
+@import "_footer";
+@import "_media";
