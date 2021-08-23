@@ -101,6 +101,7 @@ button {
 }
 
 .header {
+	z-index: 9999;
 	background-color: #DC5866;
 	color: #ffffff;
 	padding: 10px 20px;
@@ -171,7 +172,7 @@ button {
 		position: relative;
 		width: 30px;
 		height: 20px;
-		z-index: 3;
+		z-index: 9999;
 	}
 	.header__burger span {
 		position: absolute;
@@ -278,5 +279,23 @@ button {
 
 	.main__title {
 		font-size: 32px;
+	}
+}
+@media (max-width: 425px) {
+	.main__sticker {
+		width: 35vw;
+		height: 35vw;
+	}
+	.main__sticker:first-of-type {
+		top: 50px;
+		left: 0;
+	}
+	.main__sticker:nth-of-type(2) {
+		top: 50px;
+		right: 0;
+	}
+	.main__sticker:last-of-type {
+		top: 50vh;
+		left: 60%;
 	}
 }
