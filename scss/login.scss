@@ -1,0 +1,26 @@
+@import "_fonts";
+$c0:#ffffff;
+$c1:#DC5866;
+@import "_mixin";
+@import "_nullstyle";
+.main{
+    flex: 1 1 auto;
+    padding: 20px;
+    &__body{
+        position:relative;
+        display: flex;
+    }
+    &__title{
+        text-align: center;
+        font-size: 48px;
+        padding: 50px 0;
+    }
+    &__block{
+        flex: 50%;
+    }
+    &__form{
+        background-color: blue;
+    }
+}
+@import "_footer";
+@import "_media";
