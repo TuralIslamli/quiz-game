@@ -101,7 +101,6 @@ button {
 }
 
 .header {
-	z-index: 9999;
 	background-color: #DC5866;
 	color: #ffffff;
 	padding: 10px 20px;
@@ -153,47 +152,17 @@ button {
 	   -moz-box-flex: 1;
 	    -ms-flex: 1 1 auto;
 	        flex: 1 1 auto;
-	margin-top: 100px;
-	padding: 0 20px 10px;
-	background-image: url("../img/bg.png");
-	background-repeat: no-repeat;
-	-webkit-background-size: auto 100%;
-	   -moz-background-size: auto 100%;
-	     -o-background-size: auto 100%;
-	        background-size: auto 100%;
-	background-position: center;
-}
-.main__body {
-	position: relative;
+	padding: 100px 20px 10px;
 }
 .main__title {
 	text-align: center;
 	font-size: 48px;
 }
-.main__sticker {
-	position: absolute;
-	width: 25vw;
-	height: 25vw;
-	background-repeat: no-repeat;
-	-webkit-background-size: 100% auto;
-	   -moz-background-size: 100% auto;
-	     -o-background-size: 100% auto;
-	        background-size: 100% auto;
+.main__img {
+	text-align: center;
 }
-.main__sticker:first-of-type {
-	background-image: url("../img/sticker1.png");
-	top: 0;
-	left: 0;
-}
-.main__sticker:nth-of-type(2) {
-	background-image: url("../img/sticker2.png");
-	top: 0;
-	right: 0;
-}
-.main__sticker:last-of-type {
-	background-image: url("../img/sticker3.png");
-	top: 50vh;
-	left: 60%;
+.main__img img {
+	width: 25%;
 }
 
 .footer {
@@ -208,7 +177,7 @@ button {
 		position: relative;
 		width: 30px;
 		height: 20px;
-		z-index: 9999;
+		z-index: 3;
 	}
 	.header__burger span {
 		position: absolute;
@@ -315,23 +284,5 @@ button {
 
 	.main__title {
 		font-size: 32px;
-	}
-}
-@media (max-width: 425px) {
-	.main__sticker {
-		width: 35vw;
-		height: 35vw;
-	}
-	.main__sticker:first-of-type {
-		top: 50px;
-		left: 0;
-	}
-	.main__sticker:nth-of-type(2) {
-		top: 50px;
-		right: 0;
-	}
-	.main__sticker:last-of-type {
-		top: 50vh;
-		left: 60%;
 	}
 }
