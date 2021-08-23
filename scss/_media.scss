@@ -6,7 +6,7 @@
 			position: relative;
 			width: 30px;
 			height: 20px;
-			z-index: 9999;
+			z-index: 3;
 			span {
 				position: absolute;
 				top: 9px;
@@ -44,7 +44,8 @@
 			}
 		}
 		&__menu{
-            position: fixed;
+            //display: block;
+			position: fixed;
 			top: -100%;
 			left: 0;
 			width: 100%;
@@ -85,25 +86,5 @@
         &__title{
             font-size: 32px;
         }
-    }
-}
-@media (max-width: 425px) {
-	.main{
-		&__sticker{
-			width: 35vw;
-			height: 35vw;
-			&:first-of-type{
-				top: 50px;
-				left: 0;
-			}
-			&:nth-of-type(2){
-				top: 50px;
-				right: 0;
-			}
-			&:last-of-type{
-				top: 50vh;
-				left: 60%;
-			}
-		}
     }
 }
