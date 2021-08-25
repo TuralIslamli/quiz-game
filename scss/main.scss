@@ -1,20 +1,51 @@
 @import "_fonts";
 $c0:#ffffff;
 $c1:#DC5866;
+$c2:#000000;
 @import "_mixin";
 @import "_nullstyle";
 @import "_header";
 .main{
     flex: 1 1 auto;
-    padding: 100px 20px 10px;
-    &__title{
+    margin-top: 100px;
+    padding: 0 20px 10px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/icons.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    &__body{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        font-size: 48px;
     }
-    &__img{
-        text-align: center;
-        img{
-            width: 25%;
+    &__logo{
+        margin-top: 20px;
+		img{
+			width: 50%;
+		}
+    }
+    &__title{
+        @include adaptive-font(48,30);
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    &__btn{
+        @include adaptive-font(36,20);
+        font-weight: 700;
+        margin: 10px 0;
+        padding: 5px 15px;
+        color: $c0;
+        background-color: $c1;
+        border-radius: 5px;
+        &:hover{
+            box-shadow: 0 0 5px 5px rgba($color: $c2, $alpha: 0.2);
         }
     }
 }

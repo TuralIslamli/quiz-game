@@ -6,7 +6,7 @@
 			position: relative;
 			width: 30px;
 			height: 20px;
-			z-index: 3;
+			z-index: 9999;
 			span {
 				position: absolute;
 				top: 9px;
@@ -44,8 +44,7 @@
 			}
 		}
 		&__menu{
-            //display: block;
-			position: fixed;
+            position: fixed;
 			top: -100%;
 			left: 0;
 			width: 100%;
@@ -83,8 +82,10 @@
 		}
     }
     .main{
-        &__title{
-            font-size: 32px;
+        &__logo{
+            img{
+				width: 25%;
+			}
         }
     }
 }
