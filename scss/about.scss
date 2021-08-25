@@ -4,10 +4,7 @@ $c1:#DC5866;
 @import "_mixin";
 @import "_nullstyle";
 @import "_header";
-@import "_footer";
-@import "_media";
-
-.main {
+.main{
     flex: 1 1 auto;
     display: flex;
     border: 8px solid #E5828C;
@@ -15,6 +12,7 @@ $c1:#DC5866;
     height: 75vh;
     margin: 100px 20px 10px;
     align-items: center;
+    overflow: hidden;
 
     &__text {
         display: flex;
@@ -43,11 +41,68 @@ $c1:#DC5866;
     p {
         font-size: 30px;
         font-weight: 500;
+        //1
+        // background: linear-gradient(to left, #b49cf1, #D62229, #E97639, #792042);
+        // // background-size: 3200px 200px;
+        // color: transparent;
+        // background-clip: text;
+        // animation: animate-text;
+        // animation-delay: 0;
+        // animation-duration: 7s;
+        // animation-timing-function: linear;
+        // animation-iteration-count: infinite;
+        // animation-fill-mode: forwards;
+        // transition: font-size 500ms ease-in-out;
+
+        //2
+        span {
+            $animationSteps: 50;
+            $animationElementsCount: 500;
+            $delayBetweenLetters: 0.2;
+
+            animation-name: text-flow;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+
+            @keyframes text-flow {
+                @for $i from 0 through $animationSteps {
+                    #{percentage($i * (1 / $animationSteps))} {
+                        color: hsl(random(360), 50, 50);
+                    }
+                }
+            }
+
+            $totalDelayTime: $animationElementsCount * $delayBetweenLetters;
+
+            @for $i from 1 through $animationElementsCount {
+                #{span}:nth-of-type(#{$i}) {
+                    animation-delay: #{($i * $delayBetweenLetters) - $totalDelayTime}s;
+                }
+            }
+        }
+
+        //3
+        // //  background: linear-gradient(to left, #b49cf1 20%, #D62229 30%, #E97639 70%);
+        // background: linear-gradient(to left, #b49cf1, #D62229, #E97639);
+        // background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-size: 200% auto;
+        // animation: textShine 7s ease-in-out infinite;
+
+        // @keyframes textShine {
+        //     to {
+        //         background-position: 200%;
+        //     }
+        // }
     }
 
     img {
-        width: auto;
-        height: 100%;
+        // width: auto;
+        // height: 100%;
+        width: 100%;
+        height: auto;
         animation: scale 2s 1;
     }
 }
@@ -64,13 +119,17 @@ $c1:#DC5866;
 
 @media screen and (max-width: 1290px) {
     img {
-        max-height: 90%;
+        //max-height: 90%;
+        width: 100%;
+        height: auto;
     }
 }
 
 @media screen and (max-width: 1132px) {
     img {
-        max-height: 80%;
+        //max-height: 80%;
+        width: 100%;
+        height: auto;
     }
 
     .main h1 {
@@ -108,7 +167,9 @@ $c1:#DC5866;
         border-radius: 50px;
 
         img {
-            max-width: 85%;
+            // max-width: 85%;
+            // height: auto;
+            width: 100%;
             height: auto;
         }
 
@@ -160,3 +221,9 @@ $c1:#DC5866;
         }
     }
 }
+
+// @keyframes animate-text {
+//     100% {
+//         background-position: 2000px 0;
+//     }
+// }
