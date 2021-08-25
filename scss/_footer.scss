@@ -1,4 +1,10 @@
 .footer{
     text-align: center;
     padding: 10px 20px;
+    p{
+        display: inline-block;
+        border-radius: 5px;
+        background-color: rgba($color: $c0, $alpha: 0.9);
+        padding: 5px 10px;
+    }
 }

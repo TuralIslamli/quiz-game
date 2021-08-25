@@ -98,6 +98,9 @@ button {
 	   -moz-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	background-image: url("../img/pattern.png");
+	background-repeat: repeat-x;
+	background-position: 50% 100%;
 }
 
 .main {
@@ -135,6 +138,14 @@ button {
 .footer {
 	text-align: center;
 	padding: 10px 20px;
+}
+.footer p {
+	display: inline-block;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 5px 10px;
 }
 
 @media (max-width: 768px) {
@@ -249,25 +260,7 @@ button {
 		background-color: rgba(220, 88, 102, 0.75);
 	}
 
-	.main__title {
-		font-size: 32px;
-	}
-}
-@media (max-width: 425px) {
-	.main__sticker {
-		width: 35vw;
-		height: 35vw;
-	}
-	.main__sticker:first-of-type {
-		top: 50px;
-		left: 0;
-	}
-	.main__sticker:nth-of-type(2) {
-		top: 50px;
-		right: 0;
-	}
-	.main__sticker:last-of-type {
-		top: 50vh;
-		left: 60%;
+	.main__logo img {
+		width: 25%;
 	}
 }
