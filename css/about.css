@@ -157,101 +157,6 @@ button {
   color: #DC5866;
 }
 
-.footer {
-  text-align: center;
-  padding: 10px 20px;
-}
-.footer p {
-  display: inline-block;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 5px 10px;
-}
-
-@media (max-width: 768px) {
-  .header__burger {
-    position: relative;
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 20px;
-    z-index: 9999;
-  }
-  .header__burger span {
-    position: absolute;
-    top: 9px;
-    background-color: #ffffff;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transition: all 0.3s ease-in-out;
-  }
-  .header__burger:before, .header__burger:after {
-    content: "";
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    height: 2px;
-  }
-  .header__burger:before {
-    top: 0;
-  }
-  .header__burger:after {
-    bottom: 0;
-  }
-  .header__burger.active span {
-    transform: scale(0);
-  }
-  .header__burger.active:before {
-    transform: rotate(45deg);
-    top: 9px;
-  }
-  .header__burger.active:after {
-    transform: rotate(-45deg);
-    top: 9px;
-  }
-  .header__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 80px 0 0;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .header__menu.active {
-    top: 0;
-    overflow: auto;
-    background-color: rgba(220, 88, 102, 0.8);
-    opacity: 1;
-  }
-  .header__link {
-    display: block;
-    width: 100vw;
-    margin: 0;
-    padding: 30px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-  .header__link.selected, .header__link:hover {
-    border: 0;
-  }
-  .header__link:hover {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: rgba(220, 88, 102, 0.75);
-  }
-
-  .main__logo img {
-    width: 25%;
-  }
-}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -312,312 +217,312 @@ button {
 }
 @-webkit-keyframes text-flow {
   0% {
-    color: #8cbf40;
+    color: #bf4071;
   }
   2% {
-    color: #40a2bf;
+    color: #bf9940;
   }
   4% {
-    color: #a4bf40;
+    color: #bf8a40;
   }
   6% {
-    color: #bfb540;
+    color: #aabf40;
   }
   8% {
-    color: #40bfa2;
+    color: #aabf40;
   }
   10% {
-    color: #bf40b5;
-  }
-  12% {
-    color: #4048bf;
-  }
-  14% {
-    color: #4075bf;
-  }
-  16% {
-    color: #40bbbf;
-  }
-  18% {
-    color: #40bf80;
-  }
-  20% {
-    color: #bf4077;
-  }
-  22% {
-    color: #bf40bf;
-  }
-  24% {
-    color: #bf8e40;
-  }
-  26% {
-    color: #bf8440;
-  }
-  28% {
-    color: #6abf40;
-  }
-  30% {
-    color: #40a6bf;
-  }
-  32% {
-    color: #bf4088;
-  }
-  34% {
-    color: #40bf6c;
-  }
-  36% {
-    color: #40bfae;
-  }
-  38% {
-    color: #40bf6f;
-  }
-  40% {
-    color: #acbf40;
-  }
-  42% {
-    color: #40bf51;
-  }
-  44% {
-    color: #40bf8e;
-  }
-  46% {
-    color: #bf4f40;
-  }
-  48% {
-    color: #406cbf;
-  }
-  50% {
-    color: #9540bf;
-  }
-  52% {
-    color: #bf5740;
-  }
-  54% {
-    color: #ae40bf;
-  }
-  56% {
-    color: #bf4084;
-  }
-  58% {
-    color: #88bf40;
-  }
-  60% {
-    color: #bf4f40;
-  }
-  62% {
-    color: #80bf40;
-  }
-  64% {
-    color: #7dbf40;
-  }
-  66% {
-    color: #bf4086;
-  }
-  68% {
-    color: #bf6a40;
-  }
-  70% {
-    color: #bfb040;
-  }
-  72% {
-    color: #bf5b40;
-  }
-  74% {
-    color: #408abf;
-  }
-  76% {
-    color: #8c40bf;
-  }
-  78% {
-    color: #40bf7b;
-  }
-  80% {
-    color: #bfbb40;
-  }
-  82% {
-    color: #bf4088;
-  }
-  84% {
-    color: #40bfbb;
-  }
-  86% {
-    color: #40bf8c;
-  }
-  88% {
     color: #b9bf40;
   }
-  90% {
-    color: #bf4091;
+  12% {
+    color: #9140bf;
   }
-  92% {
-    color: #8c40bf;
+  14% {
+    color: #a840bf;
   }
-  94% {
+  16% {
+    color: #40bf71;
+  }
+  18% {
+    color: #4abf40;
+  }
+  20% {
+    color: #6fbf40;
+  }
+  22% {
+    color: #93bf40;
+  }
+  24% {
+    color: #40bfa2;
+  }
+  26% {
+    color: #bf4240;
+  }
+  28% {
+    color: #bf8840;
+  }
+  30% {
+    color: #40bf51;
+  }
+  32% {
+    color: #bf4064;
+  }
+  34% {
+    color: #40bf71;
+  }
+  36% {
+    color: #bf9140;
+  }
+  38% {
+    color: #bf40aa;
+  }
+  40% {
+    color: #aabf40;
+  }
+  42% {
+    color: #40bf57;
+  }
+  44% {
+    color: #7d40bf;
+  }
+  46% {
+    color: #bf40a2;
+  }
+  48% {
+    color: #bf8240;
+  }
+  50% {
+    color: #aebf40;
+  }
+  52% {
+    color: #8440bf;
+  }
+  54% {
+    color: #bf4640;
+  }
+  56% {
+    color: #bf4840;
+  }
+  58% {
+    color: #9140bf;
+  }
+  60% {
+    color: #bf407b;
+  }
+  62% {
+    color: #40bf97;
+  }
+  64% {
+    color: #6a40bf;
+  }
+  66% {
+    color: #bf4053;
+  }
+  68% {
+    color: #bf7140;
+  }
+  70% {
+    color: #bf40a8;
+  }
+  72% {
+    color: #4077bf;
+  }
+  74% {
+    color: #4d40bf;
+  }
+  76% {
+    color: #40bdbf;
+  }
+  78% {
     color: #40bf55;
   }
+  80% {
+    color: #40bf60;
+  }
+  82% {
+    color: #6a40bf;
+  }
+  84% {
+    color: #bf8c40;
+  }
+  86% {
+    color: #a6bf40;
+  }
+  88% {
+    color: #40bf4d;
+  }
+  90% {
+    color: #407bbf;
+  }
+  92% {
+    color: #bf7540;
+  }
+  94% {
+    color: #bf8e40;
+  }
   96% {
-    color: #5740bf;
+    color: #40bfac;
   }
   98% {
-    color: #40bf95;
+    color: #5940bf;
   }
   100% {
-    color: #40bf7d;
+    color: #bf4046;
   }
 }
 @keyframes text-flow {
   0% {
-    color: #8cbf40;
+    color: #bf4071;
   }
   2% {
-    color: #40a2bf;
+    color: #bf9940;
   }
   4% {
-    color: #a4bf40;
+    color: #bf8a40;
   }
   6% {
-    color: #bfb540;
+    color: #aabf40;
   }
   8% {
-    color: #40bfa2;
+    color: #aabf40;
   }
   10% {
-    color: #bf40b5;
-  }
-  12% {
-    color: #4048bf;
-  }
-  14% {
-    color: #4075bf;
-  }
-  16% {
-    color: #40bbbf;
-  }
-  18% {
-    color: #40bf80;
-  }
-  20% {
-    color: #bf4077;
-  }
-  22% {
-    color: #bf40bf;
-  }
-  24% {
-    color: #bf8e40;
-  }
-  26% {
-    color: #bf8440;
-  }
-  28% {
-    color: #6abf40;
-  }
-  30% {
-    color: #40a6bf;
-  }
-  32% {
-    color: #bf4088;
-  }
-  34% {
-    color: #40bf6c;
-  }
-  36% {
-    color: #40bfae;
-  }
-  38% {
-    color: #40bf6f;
-  }
-  40% {
-    color: #acbf40;
-  }
-  42% {
-    color: #40bf51;
-  }
-  44% {
-    color: #40bf8e;
-  }
-  46% {
-    color: #bf4f40;
-  }
-  48% {
-    color: #406cbf;
-  }
-  50% {
-    color: #9540bf;
-  }
-  52% {
-    color: #bf5740;
-  }
-  54% {
-    color: #ae40bf;
-  }
-  56% {
-    color: #bf4084;
-  }
-  58% {
-    color: #88bf40;
-  }
-  60% {
-    color: #bf4f40;
-  }
-  62% {
-    color: #80bf40;
-  }
-  64% {
-    color: #7dbf40;
-  }
-  66% {
-    color: #bf4086;
-  }
-  68% {
-    color: #bf6a40;
-  }
-  70% {
-    color: #bfb040;
-  }
-  72% {
-    color: #bf5b40;
-  }
-  74% {
-    color: #408abf;
-  }
-  76% {
-    color: #8c40bf;
-  }
-  78% {
-    color: #40bf7b;
-  }
-  80% {
-    color: #bfbb40;
-  }
-  82% {
-    color: #bf4088;
-  }
-  84% {
-    color: #40bfbb;
-  }
-  86% {
-    color: #40bf8c;
-  }
-  88% {
     color: #b9bf40;
   }
-  90% {
-    color: #bf4091;
+  12% {
+    color: #9140bf;
   }
-  92% {
-    color: #8c40bf;
+  14% {
+    color: #a840bf;
   }
-  94% {
+  16% {
+    color: #40bf71;
+  }
+  18% {
+    color: #4abf40;
+  }
+  20% {
+    color: #6fbf40;
+  }
+  22% {
+    color: #93bf40;
+  }
+  24% {
+    color: #40bfa2;
+  }
+  26% {
+    color: #bf4240;
+  }
+  28% {
+    color: #bf8840;
+  }
+  30% {
+    color: #40bf51;
+  }
+  32% {
+    color: #bf4064;
+  }
+  34% {
+    color: #40bf71;
+  }
+  36% {
+    color: #bf9140;
+  }
+  38% {
+    color: #bf40aa;
+  }
+  40% {
+    color: #aabf40;
+  }
+  42% {
+    color: #40bf57;
+  }
+  44% {
+    color: #7d40bf;
+  }
+  46% {
+    color: #bf40a2;
+  }
+  48% {
+    color: #bf8240;
+  }
+  50% {
+    color: #aebf40;
+  }
+  52% {
+    color: #8440bf;
+  }
+  54% {
+    color: #bf4640;
+  }
+  56% {
+    color: #bf4840;
+  }
+  58% {
+    color: #9140bf;
+  }
+  60% {
+    color: #bf407b;
+  }
+  62% {
+    color: #40bf97;
+  }
+  64% {
+    color: #6a40bf;
+  }
+  66% {
+    color: #bf4053;
+  }
+  68% {
+    color: #bf7140;
+  }
+  70% {
+    color: #bf40a8;
+  }
+  72% {
+    color: #4077bf;
+  }
+  74% {
+    color: #4d40bf;
+  }
+  76% {
+    color: #40bdbf;
+  }
+  78% {
     color: #40bf55;
   }
+  80% {
+    color: #40bf60;
+  }
+  82% {
+    color: #6a40bf;
+  }
+  84% {
+    color: #bf8c40;
+  }
+  86% {
+    color: #a6bf40;
+  }
+  88% {
+    color: #40bf4d;
+  }
+  90% {
+    color: #407bbf;
+  }
+  92% {
+    color: #bf7540;
+  }
+  94% {
+    color: #bf8e40;
+  }
   96% {
-    color: #5740bf;
+    color: #40bfac;
   }
   98% {
-    color: #40bf95;
+    color: #5940bf;
   }
   100% {
-    color: #40bf7d;
+    color: #bf4046;
   }
 }
 .main p span span:nth-of-type(1) {
@@ -2718,5 +2623,101 @@ button {
   }
   .main p {
     font-size: 13px;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 10px 20px;
+}
+.footer p {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+}
+
+@media (max-width: 937px) {
+  .header__burger {
+    position: relative;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 9999;
+  }
+  .header__burger span {
+    position: absolute;
+    top: 9px;
+    background-color: #ffffff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+  .header__burger:before, .header__burger:after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 2px;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 80px 0 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .header__menu.active {
+    top: 0;
+    overflow: auto;
+    background-color: rgba(220, 88, 102, 0.8);
+    opacity: 1;
+  }
+  .header__link {
+    display: block;
+    width: 100vw;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .header__link.selected, .header__link:hover {
+    border: 0;
+  }
+  .header__link:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(220, 88, 102, 0.75);
+  }
+}
+@media (max-width: 768px) {
+  .main__logo img {
+    width: 25%;
   }
 }
