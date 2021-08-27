@@ -28,15 +28,21 @@
         <header class="header">
             <div class="header__body">
                 <div class="header__account">
-                    <p><b>Пользователь:</b> Турал</p>
-                    <p><b>Статус:</b> User</p>
+                    <div class="header__logo">
+                        <img src="img/logo.png" alt="Logo" srcset="img/logo.svg">
+                    </div>
+                    <div class="header__block">
+                        <p><b>Пользователь:</b> Турал</p>
+                        <p><b>Статус:</b> User</p>
+                        <a href="#">Просмотреть мою статистику</a>
+                    </div>
                 </div>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
-                    <a href="./index.html" class="header__link">Главная</a>
-                    <a href="#" class="header__link selected">Викторина</a>
+                    <a href="index.html" class="header__link">Главная</a>
+                    <a href="./category.html" class="header__link selected">Викторина</a>
                     <a href="./contact.html" class="header__link">Обратная связь</a>
                     <a href="./about.html" class="header__link">О нас</a>
                     <a href="#" class="header__link">Выход</a>
@@ -75,7 +81,7 @@
                         <p>
                             5. Медицина
                         </p>
-                        <img src="img/medicine-icon.svg" alt="icon">
+                        <img src="img/medicine-icon.svg" alt="icon" class="medicine__icon">
                     </button>
                     <button>
                         <p>
@@ -89,6 +95,8 @@
                 </div>
             </div>
         </main>
+        <footer class="footer"><p>Fantastic Four &copy 2021</p>
+        </footer>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
