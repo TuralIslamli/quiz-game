@@ -1,6 +1,6 @@
 function addScript(src){
     let script = document.createElement('script');
-    script.src = 'js/questionsOf' + src + '.js';
+    script.src = 'js/questions/questionsOf' + src + '.js';
     script.async = false;
     document.body.appendChild(script);
 }
