@@ -1,53 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Fantastic Four">
-		<meta name="description" content="Интерактивная онлайн-игра">
-		<meta name="keywords" content="quiz, game, игра, викторина">
-		<meta name="robots" content="index,follow,noodp">
-		<meta name="googlebot" content="index,follow">
-		<meta name="google" content="nositelinkssearchbox">
-		<meta name="google" content="notranslate">
-		<meta name="google-site-verification" content="verification-token">
-		<meta name="yandex-verification" content="verification-token">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="Quiz Game">
-		<meta property="og:site_name" content="Frontend">
-		<meta property="og:description" content="Интерактивная онлайн-игра">
-		<meta property="og:url" content="">
-		<meta property="og:image" content="">
-        <title>Quiz Game</title>
-        <link rel="stylesheet" href="css/contact.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <header class="header">
-                <div class="header__body">
-                    <div class="header__account">
-                        <p><b>Пользователь:</b> Аида</p>
-                        <p><b>Статус:</b> User</p>
-                    </div>
-                    <div class="header__burger">
-                        <span></span>
-                    </div>
-                    <nav class="header__menu">
-                        <a href="./index.html" class="header__link">Главная</a>
-                        <a href="./category.html" class="header__link">Викторина</a>
-                        <a href="#" class="header__link selected">Обратная связь</a>
-                        <a href="./about.html" class="header__link">О нас</a>
-                        <a href="#" class="header__link">Выход</a>
-                    </nav>
-                </div>
-            </header>
-            <main class="main">
-                <h2 class="main__title">Написать нам</h2>
-            </main>
-            <footer class="footer">Fantastic Four &copy 2021</footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fantastic Four" />
+    <meta name="description" content="Интерактивная онлайн-игра" />
+    <meta name="keywords" content="quiz, game, игра, викторина" />
+    <meta name="robots" content="index,follow,noodp" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+    <meta name="google-site-verification" content="verification-token" />
+    <meta name="yandex-verification" content="verification-token" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Quiz Game" />
+    <meta property="og:site_name" content="Frontend" />
+    <meta property="og:description" content="Интерактивная онлайн-игра" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__body">
+          <div class="header__account">
+            <div class="header__logo">
+              <img src="img/logo.png" alt="Logo" srcset="img/logo.svg" />
+            </div>
+            <div class="header__block">
+              <p><b>Пользователь:</b> Аида</p>
+              <p><b>Статус:</b> User</p>
+              <a href="#">Просмотреть мою статистику</a>
+            </div>
+          </div>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="header__menu">
+            <a href="./index.html" class="header__link">Главная</a>
+            <a href="./category.html" class="header__link">Викторина</a>
+            <a href="#" class="header__link selected">Обратная связь</a>
+            <a href="./about.html" class="header__link">О нас</a>
+            <a href="#" class="header__link">Выход</a>
+          </nav>
         </div>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+      </header>
+      <main class="main">
+        <div class="main__text">
+          <h1 class="txt">Написать нам</h1>
+          <div id="form">
+            <form class="form">
+              <label class="remove" for="email">Email</label>
+              <input
+                required
+                type="email"
+                name="email"
+                class="email formEntry remove"
+                placeholder="Type your email"
+              />
+              <label class="remove" for="textarea">Your text</label>
+              <textarea
+                required
+                name="textarea"
+                maxlength="200"
+                class="message formEntry remove"
+                placeholder="Type your text"
+              ></textarea>
+              <input
+                class="send"
+                onclick="changeContent()"
+                type="submit"
+                value="Отправить"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="main__image">
+          <img src="img/contact.png" alt="" />
+        </div>
+      </main>
+      <footer class="footer"><p>Fantastic Four &copy 2021</p></footer>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
 </html>
