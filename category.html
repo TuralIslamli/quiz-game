@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +35,7 @@
                     <div class="header__block">
                         <p><b>Пользователь:</b> Турал</p>
                         <p><b>Статус:</b> User</p>
-                        <a href="#">Просмотреть мою статистику</a>
+                        <a href="statistics.html">Просмотреть мою статистику</a>
                     </div>
                 </div>
                 <div class="header__burger">
@@ -52,54 +53,58 @@
         <main class="main">
             <h2 class="main__title">Выберите категорию тестов</h2>
             <div class="category__body">
-                <div class="categories">
-                    <button>
-                        <p>
-                            1. Наука
-                        </p>
-                        <img src="img/science_icon.svg" alt="icon">
-                    </button>
-                    <button>
-                        <p>
-                            2. Искусство
-                        </p>
-                        <img src="img/art_icon.svg" alt="icon">
-                    </button>
-                    <button>
-                        <p>
-                            3. Спорт
-                        </p>
-                        <img src="img/sprort-icon.svg" alt="icon">
-                    </button>
-                    <button>
-                        <p>
-                            4. Музыка
-                        </p>
-                        <img src="img/music-icon.svg" alt="icon">
-                    </button>
-                    <button>
-                        <p>
-                            5. Медицина
-                        </p>
-                        <img src="img/medicine-icon.svg" alt="icon" class="medicine__icon">
-                    </button>
-                    <button>
-                        <p>
-                            6. География
-                        </p>
-                        <img src="img/geography-icon.svg" alt="icon">
-                    </button>
+                <div class="categories" id="categories">
+                    <!-- <form action="questions.html"> -->
+                        <button class="categories-btn">
+                            <p>
+                                1. Наука
+                            </p>
+                            <img src="img/science_icon.svg" alt="icon">
+                        </button>
+                        <button class="categories-btn">
+                            <p>
+                                2. Искусство
+                            </p>
+                            <img src="img/art_icon.svg" alt="icon">
+                        </button>
+                        <button class="categories-btn">
+                            <p>
+                                3. Спорт
+                            </p>
+                            <img src="img/sprort-icon.svg" alt="icon">
+                        </button>
+                        <button class="categories-btn">
+                            <p>
+                                4. Музыка
+                            </p>
+                            <img src="img/music-icon.svg" alt="icon">
+                        </button>
+                        <button class="categories-btn">
+                            <p>
+                                5. Медицина
+                            </p>
+                            <img src="img/medicine-icon.svg" alt="icon" class="medicine__icon">
+                        </button>
+                        <button class="categories-btn">
+                            <p>
+                                6. География
+                            </p>
+                            <img src="img/geography-icon.svg" alt="icon">
+                        </button>
                 </div>
                 <div class="main__photo">
                     <img src="img/category_page_photo.svg" alt="photo">
                 </div>
+                <!-- </form> -->
             </div>
         </main>
-        <footer class="footer"><p>Fantastic Four &copy 2021</p>
+        <footer class="footer">
+            <p>Fantastic Four &copy 2021</p>
         </footer>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/category.js"></script>
 </body>
 
 </html>
