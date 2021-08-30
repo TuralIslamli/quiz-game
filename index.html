@@ -20,46 +20,72 @@
 		<meta property="og:url" content="">
 		<meta property="og:image" content="">
         <title>Quiz Game</title>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="./css/login.css">
     </head>
     <body>
         <div class="wrapper">
-            <header class="header">
-                <div class="header__body">
-                    <div class="header__account">
-                        <div class="header__logo">
-                            <img src="img/logo.png" alt="Logo" srcset="img/logo.svg">
-                        </div>
-                        <div class="header__block">
-                            <p><b>Пользователь:</b> Фидан</p>
-                            <p><b>Статус:</b> User</p>
-                            <a href="#">Просмотреть мою статистику</a>
-                        </div>
-                    </div>
-                    <div class="header__burger">
-                        <span></span>
-                    </div>
-                    <nav class="header__menu">
-                        <a href="#" class="header__link selected">Главная</a>
-                        <a href="./category.html" class="header__link">Викторина</a>
-                        <a href="./contact.html" class="header__link">Обратная связь</a>
-                        <a href="./about.html" class="header__link">О нас</a>
-                        <a href="#" class="header__link">Выход</a>
-                    </nav>
-                </div>
-            </header>
             <main class="main">
                 <div class="main__body">
-                    <div class="main__logo">
-                        <img src="img/main-logo.png" alt="Logo" srcset="img/main-logo.svg">
+                    <div class="main__block">
+                        <div class="main__form">
+                            <h2 class="main__title">Sign in</h2>
+                            <form class="form" id="signin" action="" method="POST" onsubmit="signIn(event);" autocomplete="off">
+                                <div class="form__icon">
+                                    <img src="./img/icon-sign.png" alt="icon" srcset="./img/icon-sign.svg">
+                                </div>
+                                <p>Email</p>
+                                <input type="email" name="signin" id="signin_email" placeholder="Type your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                <p>Password</p>
+                                <input type="password" name="signin" id="signin_pass" placeholder="******************" required>
+                                <div class="form__txt">
+                                    <p>
+                                        Dont have account?
+                                        <a href="#" class="form__link">Sign up</a>
+                                    </p>
+                                </div>
+                                <button type="submit" id="signin_btn">Sign in</button>
+                            </form>
+                        </div>
+                        <div class="main__form">
+                            <h2 class="main__title">Sign up</h2>
+                            <form class="form" id="signup" action="" method="POST" onsubmit="signUp(event);" autocomplete="off">
+                                <div class="form__icon">
+                                    <img src="./img/icon-sign.png" alt="icon" srcset="./img/icon-sign.svg">
+                                </div>
+                                <p>Email</p>
+                                <input type="email" name="signup" id="signup_email" placeholder="Type your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                <p>Password</p>
+                                <input type="password" name="signup" id="signup_pass" placeholder="******************" required>
+                                <p>Confirm password</p>
+                                <input type="password" name="signup" id="signup_pass_repeat" placeholder="******************" required>
+                                <p>Choose birthday</p>
+                                <input type="date" name="signup" id="signup_date" placeholder="" required>
+                                <div class="form__txt">
+                                    <p>
+                                        <input type="radio" name="signup" id="signup_male" checked>
+                                        <label for="signup_male"><span></span>Male</label>
+                                        <input type="radio" name="signup" id="signup_female">
+                                        <label for="signup_female"><span></span>Female</label>
+                                    </p>
+                                    <p>
+                                        Already have account?
+                                        <a href="#" class="form__link">Sign in</a>
+                                    </p>
+                                </div>
+                                <button type="submit" id="signup_btn">Sign up</button>
+                            </form>
+                        </div>
                     </div>
-                    <h1 class="main__title">Образовательный портал</h1>
-                    <a href="#" class="main__btn">Начать случайную игру</a>
+                    <div class="main__block">
+                        <div class="main__img">
+                            <img src="./img/scr.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </main>
             <footer class="footer"><p>Fantastic Four &copy 2021</p></footer>
         </div>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>

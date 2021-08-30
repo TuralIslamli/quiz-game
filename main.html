@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Fantastic Four">
+		<meta name="description" content="Интерактивная онлайн-игра">
+		<meta name="keywords" content="quiz, game, игра, викторина">
+		<meta name="robots" content="index,follow,noodp">
+		<meta name="googlebot" content="index,follow">
+		<meta name="google" content="nositelinkssearchbox">
+		<meta name="google" content="notranslate">
+		<meta name="google-site-verification" content="verification-token">
+		<meta name="yandex-verification" content="verification-token">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Quiz Game">
+		<meta property="og:site_name" content="Frontend">
+		<meta property="og:description" content="Интерактивная онлайн-игра">
+		<meta property="og:url" content="">
+		<meta property="og:image" content="">
+        <title>Quiz Game</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__body">
+                    <div class="header__account">
+                        <div class="header__logo">
+                            <img src="img/logo.png" alt="Logo" srcset="img/logo.svg">
+                        </div>
+                        <div class="header__block">
+                            <p><b>Логин:</b> <span id="user_name"></span></p>
+                            <p><b>Статус:</b> User</p>
+                            <a href="#">Просмотреть мою статистику</a>
+                        </div>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <nav class="header__menu">
+                        <a href="./main.html" class="header__link selected">Главная</a>
+                        <a href="./category.html" class="header__link">Викторина</a>
+                        <a href="./contact.html" class="header__link">Обратная связь</a>
+                        <a href="./about.html" class="header__link">О нас</a>
+                        <a href="./index.html" class="header__link">Выход</a>
+                    </nav>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main__body">
+                    <div class="main__logo">
+                        <img src="img/main-logo.png" alt="Logo" srcset="img/main-logo.svg">
+                    </div>
+                    <h1 class="main__title">Образовательный портал</h1>
+                    <a href="#" class="main__btn">Начать случайную игру</a>
+                </div>
+            </main>
+            <footer class="footer"><p>Fantastic Four &copy 2021</p></footer>
+        </div>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
