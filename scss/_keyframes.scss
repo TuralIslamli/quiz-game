@@ -10,10 +10,12 @@
 }
 @keyframes moveLeftLast{
     from{
+        left:100vw;
         opacity: 0;
         transform: translateX(100vw);
     }
     to{
+        left:0;
         opacity: 1;
         transform: translateX(0);
     }
