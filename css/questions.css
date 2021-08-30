@@ -1,12 +1,12 @@
 @font-face {
-	font-family: M PLUS Rounded 1c;
-	src: url(../../../fonts/MPLUSRounded1c-Thin.ttf);
+	font-family: "M PLUS Rounded 1c";
+	src: url("../fonts/MPLUSRounded1c-Thin.ttf");
 	font-weight: 100;
 	font-style: normal;
 }
 @font-face {
-	font-family: M PLUS Rounded 1c;
-	src: url(../../../fonts/MPLUSRounded1c-Light.ttf);
+	font-family: "M PLUS Rounded 1c";
+	src: url("../fonts/MPLUSRounded1c-Light.ttf");
 	font-weight: 300;
 	font-style: normal;
 }
