@@ -208,12 +208,9 @@ button {
 }
 
 .header__block a {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.header__block a:hover {
+	color: #AAA3A3;
 	text-decoration: none;
+	pointer-events:none;
 }
 
 .header__burger {
@@ -294,26 +291,47 @@ button {
 
 .categories button {
 	width: 80%;
+	height: auto;
 	background: #E45D6C;
 	border: 4px solid #C83949;
 	box-sizing: border-box;
 	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items:flex-start;
+	justify-content: flex-start;
+	margin-bottom: 15px;
+	padding: 10px;
+	animation-duration: 2.5s;
+	animation-name: categories-animation;
+}
+.button-title{
 	font-style: normal;
 	font-weight: bolder;
 	font-size: 48px;
 	line-height: 70px;
 	color: #FFFFFF;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 15px;
-	padding: 10px;
-	animation-duration: 2.5s;
-	animation-name: categories-animation;
-	opacity: 1;
-    visibility: visible;
-    transition: 4s opacity;
 }
+.categories ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items:flex-start;
+}
+.categories li{
+	font-style: normal;
+	font-weight: bolder;
+	font-size: 24px;
+	line-height: 35px;
+	color:white;
+	list-style-type: none;
+}
+
+#science-statistics, #art-statistics, #sport-statistics, #music-statistics, #medicine-statistics, #geo-statistics{
+	display: none;
+}
+
+
 
 @keyframes categories-animation {
 	from {
@@ -333,9 +351,6 @@ button {
 	background-color: #C83949;
 }
 
-.categories button:focus {
-	opacity: 0;
-}
 
 .main__photo {
 	width: 90%;
