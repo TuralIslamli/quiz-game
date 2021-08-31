@@ -1,5 +1,5 @@
 const questionsOfMedicine = [
-    [{
+    [   {
             id: 1,
             title: "Сердце человека трехкамерное",
             isShowed: false,
@@ -120,7 +120,7 @@ const questionsOfMedicine = [
             isCorrect: false,
         },
     ],
-    [{
+    [   {
             id: 1,
             title: "Нарушение ночного видения появляется при недостатке витамина A",
             isShowed: false,
@@ -239,6 +239,8 @@ const questionsOfMedicine = [
             title: "Один квадратный сантиметр человеческой кожи содержит около миллиона потовых желез",
             isShowed: false,
             isCorrect: false,
-        },
-    ],
+        }
+    ]
 ];
+
+localStorage.setItem('arrayOfQuestions', JSON.stringify(questionsOfMedicine[Math.floor(Math.random() * 2)]));

@@ -1,5 +1,5 @@
 const questionsOfScience = [
-    [{
+    [   {
             id: 1,
             title: "Юпитер — шестая планета от Cолнца",
             isShowed: false,
@@ -120,7 +120,7 @@ const questionsOfScience = [
             isCorrect: false,
         },
     ],
-    [{
+    [   {
             id: 1,
             title: "Уран виден с Земли невооруженным глазом",
             isShowed: false,
@@ -154,13 +154,13 @@ const questionsOfScience = [
             id: 6,
             title: "В коллайдере может родиться черная дыра",
             isShowed: false,
-            isCorrect: true,
+            isCorrect: false,
         },
         {
             id: 7,
             title: "Россия, Франция и Дания входят в список стран, участвовавших в создании МКС",
             isShowed: false,
-            isCorrect: false,
+            isCorrect: true,
         },
         {
             id: 8,
@@ -242,3 +242,5 @@ const questionsOfScience = [
         },
     ],
 ];
+
+localStorage.setItem('arrayOfQuestions', JSON.stringify(questionsOfScience[Math.floor(Math.random() * 2)]));
