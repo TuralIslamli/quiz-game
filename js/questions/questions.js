@@ -1,4 +1,4 @@
-var categoryName = localStorage.getItem('category');
+let categoryName = localStorage.getItem('category');
 localStorage.removeItem('arrayOfQuestions');
 let script = document.createElement('script');
 
@@ -6,11 +6,11 @@ script.src = 'js/questions/questionsOf' + categoryName + '.js';
 document.body.appendChild(script);
 
 const setNewQuestions = () => {
-    var isArrayInStorage = localStorage.getItem('arrayOfQuestions');
+    let isArrayInStorage = localStorage.getItem('arrayOfQuestions');
     let arrayOfQuestions = isArrayInStorage && JSON.parse(isArrayInStorage);
-    var isTrueAnswerBtn = document.getElementById('isTrueAnswerBtn');
-    var isFalseAnswerBtn = document.getElementById('isFalseAnswerBtn');
-    var nextBtn = document.getElementById('next_btn');
+    let isTrueAnswerBtn = document.getElementById('isTrueAnswerBtn');
+    let isFalseAnswerBtn = document.getElementById('isFalseAnswerBtn');
+    let nextBtn = document.getElementById('next_btn');
 
     if (isArrayInStorage) {
         document.querySelector("h2").innerText = 'Выбранная категория: ' + localStorage.getItem('categoryİnRus');
@@ -40,9 +40,7 @@ const setNewQuestions = () => {
             console.log("checkForAnswer ~ answer", answer)
             const currentQuestion = arr[index];
             const currentQuestionAnswer = currentQuestion.isCorrect;
-            const trueOption = document.getElementsByClassName("green");
-            myAnswer = answer.innerText;
-            if (myAnswer == 'Истина') {
+            if (answer == 'Истина') {
                 myAnswer = true;
             } else {
                 myAnswer = false;
