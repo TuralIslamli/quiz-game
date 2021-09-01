@@ -522,7 +522,7 @@ button {
 	padding: 5px 10px;
 }
 
-@media (max-width: 937px) {
+@media (max-width: 944px) {
 	.header__burger {
 		position: relative;
 		display: block;
