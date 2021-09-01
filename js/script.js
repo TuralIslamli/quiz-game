@@ -13,8 +13,7 @@
     if(count===0) {
         clearInterval(IntervalId);       
         document.querySelector('.viktorin_timer').style.display="none";
-        document.querySelector('.viktorin_question').className="blok appear";
-       // document.querySelector('.viktorin_question').classList.add('appear');    
+        document.querySelector('.viktorin_question').className="blok appear";   
     }
   },1000)
 
@@ -36,9 +35,6 @@
     document.querySelector('.timer').textContent=`${minutes}:${seconds>9 ?'':'0'}${seconds}`;
  },1000);
 }
-
-  
- 
 
 
 
