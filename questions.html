@@ -1,111 +1,121 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fantastic Four" />
+    <meta name="description" content="Интерактивная онлайн-игра" />
+    <meta name="keywords" content="quiz, game, игра, викторина" />
+    <meta name="robots" content="index,follow,noodp" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+    <meta name="google-site-verification" content="verification-token" />
+    <meta name="yandex-verification" content="verification-token" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Quiz Game" />
+    <meta property="og:site_name" content="Frontend" />
+    <meta property="og:description" content="Интерактивная онлайн-игра" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="./css/questions.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Fantastic Four" />
-  <meta name="description" content="Интерактивная онлайн-игра" />
-  <meta name="keywords" content="quiz, game, игра, викторина" />
-  <meta name="robots" content="index,follow,noodp" />
-  <meta name="googlebot" content="index,follow" />
-  <meta name="google" content="nositelinkssearchbox" />
-  <meta name="google" content="notranslate" />
-  <meta name="google-site-verification" content="verification-token" />
-  <meta name="yandex-verification" content="verification-token" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Quiz Game" />
-  <meta property="og:site_name" content="Frontend" />
-  <meta property="og:description" content="Интерактивная онлайн-игра" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <title>Quiz Game</title>
-  <link rel="stylesheet" href="./css/questions.css" />
-</head>
-
-<body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="header__body">
-        <div class="header__account">
-          <div class="header__logo">
-            <a href="./main.html">
-              <img src="./img/logo.png" alt="Logo" srcset="./img/logo.svg" />
-            </a>
-          </div>
-          <div class="header__block">
-            <p><b>Логин:</b> <span id="user_name"></span></p>
-            <p><b>Статус:</b> User</p>
-            <a href="./statistics.html">Просмотреть мою статистику</a>
-          </div>
-        </div>
-        <div class="header__burger">
-          <span></span>
-        </div>
-        <nav class="header__menu">
-          <a href="./main.html" class="header__link">Главная</a>
-          <a href="./category.html" class="header__link selected">Викторина</a>
-          <a href="./contact.html" class="header__link">Обратная связь</a>
-          <a href="./about.html" class="header__link">О нас</a>
-          <a href="./index.html" class="header__link">Выход</a>
-        </nav>
-      </div>
-    </header>
-    <main class="main">
-      <h2 class="main__title"></h2>
-      <div class="viktorin">
-        <div class="viktorin_items">
-          <div class="viktorin_content">
-            <div class="viktorin_timer">
-              <div class="viktorin_waiting">
-                <div>
-                  <p class="seconds_till">5</p>
-                </div>
-              </div>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__body">
+          <div class="header__account">
+            <div class="header__logo">
+              <a href="./main.html">
+                <img src="./img/logo.png" alt="Logo" srcset="./img/logo.svg" />
+              </a>
             </div>
-            <div class="viktorin_question">
-              <div class="correct">
-                <p>Верные:<span class="right"></span></p>
-                <p>Неверные:<span class="wrong"></span></p>
-              </div>
-              <div class="question_content">
-                <div class="question_text"></div>
-                <div class="question_buttons">
-                  <div>
-                    <a class="green true answer hide" href="#" id="isTrueAnswerBtn">Истина</a>
-                  </div>
-                  <div>
-                    <a class="red false answer hide" href="#" id="isFalseAnswerBtn">Ложь</a>
-                  </div>
-                </div>
-                <div class="ahead">
-                  <a id="next_btn" class="hide" href="#">Вперед</a>
-                </div>
-              </div>
-              <p class="timer">3:00</p>
+            <div class="header__block">
+              <p><b>Логин:</b> <span id="user_name"></span></p>
+              <p><b>Статус:</b> User</p>
+              <a href="./statistics.html">Просмотреть мою статистику</a>
             </div>
           </div>
-          <div class="viktorin_img"></div>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="header__menu">
+            <a href="./main.html" class="header__link">Главная</a>
+            <a href="./category.html" class="header__link selected"
+              >Викторина</a
+            >
+            <a href="./contact.html" class="header__link">Обратная связь</a>
+            <a href="./about.html" class="header__link">О нас</a>
+            <a href="./index.html" class="header__link">Выход</a>
+          </nav>
         </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer_quote">
-        <div class="foot_back">
-          <div class="footer_text">
-            <p id="quote">Загрузка цитаты...</p>
-            <p id="author"></p>
+      </header>
+      <main class="main">
+        <h2 class="main__title"></h2>
+        <div class="viktorin">
+          <div class="viktorin_items">
+            <div class="viktorin_content">
+              <div class="viktorin_timer">
+                <div class="viktorin_waiting">
+                  <div>
+                    <p class="seconds_till">5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="viktorin_question">
+                <div class="correct">
+                  <p>Верные: <span class="right">0</span></p>
+                  <p>Неверные: <span class="wrong">0</span></p>
+                </div>
+                <div class="question_content">
+                  <div class="question_text"></div>
+                  <div class="question_buttons">
+                    <div>
+                      <a
+                        class="green true answer hide"
+                        href="#"
+                        id="isTrueAnswerBtn"
+                        >Истина</a
+                      >
+                    </div>
+                    <div>
+                      <a
+                        class="red false answer hide"
+                        href="#"
+                        id="isFalseAnswerBtn"
+                        >Ложь</a
+                      >
+                    </div>
+                  </div>
+                  <div class="ahead">
+                    <a id="next_btn" class="hide" href="#">Вперед</a>
+                  </div>
+                </div>
+                <p class="timer">3:00</p>
+              </div>
+            </div>
+            <div class="viktorin_img"></div>
           </div>
         </div>
-      </div>
-      <p>Fantastic Four &copy 2021</p>
-    </footer>
-  </div>
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="./js/script.js"></script>
-  <script src="./js/questions/questions.js"></script>
-</body>
-
+      </main>
+      <footer class="footer">
+        <div class="footer_quote">
+          <div class="foot_back">
+            <div class="footer_text">
+              <p id="quote">Загрузка цитаты...</p>
+              <p id="author"></p>
+            </div>
+          </div>
+        </div>
+        <p>Fantastic Four &copy 2021</p>
+      </footer>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/questions/questions.js"></script>
+  </body>
 </html>

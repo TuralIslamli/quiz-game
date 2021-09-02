@@ -22,6 +22,14 @@ document.getElementById(`Music_Wrong_Ans`).innerText =  localStorage.getItem('wr
 document.getElementById(`Science_Wrong_Ans`).innerText = localStorage.getItem('wrongAnsScience')
 document.getElementById(`Sport_Wrong_Ans`).innerText = localStorage.getItem('wrongAnsSport')
 
+document.getElementById(`Art_Rating`).innerText = localStorage.getItem('ratingArt')
+document.getElementById(`Geography_Rating`).innerText = localStorage.getItem('ratingGeography')
+document.getElementById(`Medicine_Rating`).innerText = localStorage.getItem('ratingMedicine')
+document.getElementById(`Music_Rating`).innerText =  localStorage.getItem('ratingMusic')
+document.getElementById(`Science_Rating`).innerText = localStorage.getItem('ratingScience')
+document.getElementById(`Sport_Rating`).innerText = localStorage.getItem('ratingSport')
+// document.getElementById(`${categoryName}_Rating`).innerText = (100*document.getElementById(`${categoryName}_Wrong_Ans`).innerText)/(20*document.getElementById(`count_of_${categoryName}`).innerText);
+
 let clickedCategory;
 for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener("click", function() {
@@ -33,6 +41,7 @@ for (let i = 0; i < accordion.length; i++) {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
+      // panel.lastCild.lastCild = (100*document.getElementById(`${categoryName}_Wrong_Ans`).innerText)/(20*document.getElementById(`count_of_${categoryName}`).innerText);
     }
   });
 }
