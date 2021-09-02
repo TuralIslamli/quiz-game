@@ -151,6 +151,7 @@ button {
 	   -moz-box-flex: 0;
 	    -ms-flex: 0 1 auto;
 	        flex: 0 1 auto;
+	z-index: 10000;
 }
 @media (max-width: 767px) {
 	.header__account {
