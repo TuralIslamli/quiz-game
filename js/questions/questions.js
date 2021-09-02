@@ -38,8 +38,6 @@ function startTimer(duration, display) {
         if (--timer < 0) {
             clearInterval(myTimer);
             document.querySelector(".question_text").innerHTML = 'ВРЕМЯ ВЫШЛО <br><br> ИГРА ОКОНЧЕНА';
-            document.querySelectorAll(".hide").forEach((el) => el.style.display = 'none');
-            document.querySelector('.timer').style.display = "none";
             endGame();
         }
     }, 1000);
@@ -58,7 +56,7 @@ const setNewQuestions = () => {
         localStorage.removeItem('wrongAnswers');
         nextQuestion(0);
 
-        let fiveMinutes = 60 * 3;
+        let fiveMinutes = 60*3;
         let display = document.querySelector('.timer');
         startTimer(fiveMinutes, display);
 
@@ -113,8 +111,6 @@ const setNewQuestions = () => {
             } else {
                 clearInterval(myTimer);
                 document.querySelector(".question_text").innerHTML = 'ИГРА ОКОНЧЕНА';
-                document.querySelectorAll(".hide").forEach((el) => el.style.display = 'none');
-                document.querySelector('.timer').style.display = "none";
                 endGame();
             }
             document.getElementsByClassName('question_content')[0].style.backgroundColor = "#DC5866";
@@ -150,9 +146,14 @@ let countOfSport = incrementCounter();
 function setToLocalStore() {
     localStorage.setItem('cntOf' + categoryName, eval(`countOf${categoryName}()`));
     localStorage.setItem('rightAns' + categoryName, eval(`rightAnswers${categoryName}() - 1`));
-    localStorage.setItem('wrongAns' + categoryName, eval(`20 - (rightAnswers${categoryName}() - 2)`));
+    localStorage.setItem('wrongAns' + categoryName, eval(`20*(countOf${categoryName}()-1) - (rightAnswers${categoryName}() - 2)`));
+    localStorage.setItem('rating' + categoryName, eval(`Math.round(100*(rightAnswers${categoryName}()-3)/(20*(countOf${categoryName}()-2))*100)/100`));
 }
+
 function endGame() {
+    document.querySelectorAll(".hide").forEach((el) => el.style.display = 'none');
+    document.querySelector('.timer').style.display = "none";
+    document.getElementsByClassName('question_content')[0].style.backgroundColor = "#DC5866";
     setToLocalStore();
 }
 
