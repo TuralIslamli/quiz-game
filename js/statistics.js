@@ -28,20 +28,15 @@ document.getElementById(`Medicine_Rating`).innerText = localStorage.getItem('rat
 document.getElementById(`Music_Rating`).innerText =  localStorage.getItem('ratingMusic')
 document.getElementById(`Science_Rating`).innerText = localStorage.getItem('ratingScience')
 document.getElementById(`Sport_Rating`).innerText = localStorage.getItem('ratingSport')
-// document.getElementById(`${categoryName}_Rating`).innerText = (100*document.getElementById(`${categoryName}_Wrong_Ans`).innerText)/(20*document.getElementById(`count_of_${categoryName}`).innerText);
 
-let clickedCategory;
 for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener("click", function() {
     this.classList.toggle("_active");
-    clickedCategory = this.classList[1];
-
     let panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
-      // panel.lastCild.lastCild = (100*document.getElementById(`${categoryName}_Wrong_Ans`).innerText)/(20*document.getElementById(`count_of_${categoryName}`).innerText);
     }
   });
 }
