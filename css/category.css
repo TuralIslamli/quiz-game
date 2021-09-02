@@ -260,11 +260,6 @@ button {
 	-moz-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-moz-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	-moz-box-align: center;
@@ -350,8 +345,7 @@ button {
 	animation-name: categories-photo;
 }
 .main__photo img {
-	width: 90%;
-	height: 80%;
+	width: 80%;
 	padding-left: 30px;
 }
 @keyframes categories-photo {
