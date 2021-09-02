@@ -13,7 +13,7 @@ randomBtn[0].addEventListener("click", function () {
     randomChoose(this);
     setTimeout(() => {
         location.href = "./questions.html"
-    }, 2000);
+    }, 0);
 })
 
 function randomChoose(btn) {
