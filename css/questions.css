@@ -235,6 +235,10 @@ button {
 	text-align: center;
 	padding: 10px 20px;
 }
+.viktorin{
+	margin-bottom: 30px;
+}
+
 .viktorin_items {
     display: flex;
 	align-items: center;
@@ -253,8 +257,6 @@ button {
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 445px;
-	
-	
 }
 .viktorin_img img {
     width:100%;
@@ -282,9 +284,8 @@ button {
     animation-name:victorin_circle;
     animation-duration: 0.5s;
     animation-iteration-count: 10;
-    animation-timing-function:ease-in-out; /*cubic-bezier(0.68, -0.55,0.265, 1.55);*/
+    animation-timing-function:ease-in-out;
     animation-direction: alternate;
-	
 }
 
 .viktorin_timer {
@@ -300,7 +301,6 @@ button {
 .viktorin_question{
     padding-top:1em;
     display: none;  
-
 }
 
 .viktorin_content {
@@ -323,13 +323,9 @@ button {
 
 
 .question_content {
-   
     background-color: #DC5866;
     border-radius: 5px;
-    padding:3em;
-	/* border:1px solid blue; */
-	
-    
+    padding: 3em 0em;
 }
 
 .question_text {
@@ -338,13 +334,13 @@ button {
     font-weight: bold;
 	margin-bottom: 1.5em;
 	text-align: center;
+	padding: 10px 15px;
 }
 
 .question_buttons {
     display: flex;
     justify-content: space-around;
 	margin-bottom: 1.5em;
-
 }
 
 .question_buttons div a  {
@@ -364,7 +360,7 @@ button {
 
 .green:hover {
 	color:black;
-	background-color:#EF5050;
+	background-color:#4FE055;
 }
 
 .red:hover {
@@ -393,15 +389,12 @@ button {
 .blok {
     display: block;
     padding-top:2em;
-	height: 445px;
-	border:1px solid black;
+	height: auto;
 }
 
 .appear {
-
     animation-name: fade;
     animation-duration: 1s;
-    
 }
 
 .shake {
@@ -427,20 +420,24 @@ button {
 }
 
 .foot_back {
-	background-image: url("../img/Pattern.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 100px;
-	border:1px solid black;
+	height: auto;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
+	align-items: center;
+	margin-bottom: 10px;
 }
 
 .footer {
 	text-align: center;
 	padding: 10px 20px;
+}
+
+.footer_quote{
+	visibility: hidden;
 }
 
 .footer p {
@@ -453,13 +450,15 @@ button {
 }
 
 .footer_text {
+	max-width: 800px;
 	background-color: white;
-	display: inline-block;
 	border-radius: 20px;
     border: 4px solid #DC5866;
 	color: black;
 	font-style: italic;
 	padding: 0.3em 0.5em;
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -724,6 +723,11 @@ button {
 
 	.main__title {
 		font-size: 32px;
+	}
+	.question_buttons {
+		flex-direction: column;
+		align-items:center;
+		margin-bottom: 1.5em;
 	}
 }
 
