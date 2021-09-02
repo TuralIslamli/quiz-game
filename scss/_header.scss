@@ -20,6 +20,7 @@
         align-items: center;
         @include adaptive-font(14,12);
 		flex:0 1 auto;
+        z-index: 10000;
     }
     &__logo{
         line-height: 0;

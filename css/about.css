@@ -107,6 +107,7 @@ button {
   display: flex;
   align-items: center;
   flex: 0 1 auto;
+  z-index: 10000;
 }
 @media (max-width: 767px) {
   .header__account {
