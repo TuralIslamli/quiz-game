@@ -22,12 +22,16 @@ document.getElementById(`Music_Wrong_Ans`).innerText =  localStorage.getItem('wr
 document.getElementById(`Science_Wrong_Ans`).innerText = localStorage.getItem('wrongAnsScience')
 document.getElementById(`Sport_Wrong_Ans`).innerText = localStorage.getItem('wrongAnsSport')
 
-let clickedCategory;
+document.getElementById(`Art_Rating`).innerText = localStorage.getItem('ratingArt')
+document.getElementById(`Geography_Rating`).innerText = localStorage.getItem('ratingGeography')
+document.getElementById(`Medicine_Rating`).innerText = localStorage.getItem('ratingMedicine')
+document.getElementById(`Music_Rating`).innerText =  localStorage.getItem('ratingMusic')
+document.getElementById(`Science_Rating`).innerText = localStorage.getItem('ratingScience')
+document.getElementById(`Sport_Rating`).innerText = localStorage.getItem('ratingSport')
+
 for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener("click", function() {
     this.classList.toggle("_active");
-    clickedCategory = this.classList[1];
-
     let panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
