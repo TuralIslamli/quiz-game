@@ -1,9 +1,32 @@
 let categoryName = localStorage.getItem('category');
 localStorage.removeItem('arrayOfQuestions');
 let script = document.createElement('script');
-
 script.src = 'js/questions/questionsOf' + categoryName + '.js';
 document.body.appendChild(script);
+////////
+// if(localStorage.getItem("statistics"+ categoryName)!= null) {
+//     let neededCategoryStatistics = localStorage.setItem("statistics"+ categoryName, JSON.stringify(categoryName+'Obj'));
+//     } else {
+//     let neededCategoryStatistics = localStorage.getItem("statistics"+ categoryName);
+//     }
+///////
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    return myTimer = setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            clearInterval(myTimer);
+            document.querySelector(".question_text").innerHTML = 'ВРЕМЯ ВЫШЛО <br><br> ИГРА ОКОНЧЕНА';
+            document.querySelectorAll(".hide").forEach((el)=>el.style.display = 'none');
+            document.querySelector('.timer').style.display="none";
+        }
+    }, 1000);
+}
 
 const setNewQuestions = () => {
     let isArrayInStorage = localStorage.getItem('arrayOfQuestions');
@@ -20,6 +43,10 @@ const setNewQuestions = () => {
         let index = 0;
         let arr = [];
         nextQuestion(0);
+
+        let fiveMinutes = 60*3;
+        let display = document.querySelector('.timer');
+        startTimer(fiveMinutes, display);
 
         function handleQuestions() {
             while (arr.length <= 19) {
@@ -60,6 +87,8 @@ const setNewQuestions = () => {
 
             document.querySelector('.right').innerText = playerScore;
             document.querySelector('.wrong').innerText = wrongAnswersScore;
+            localStorage.setItem('rightAnswers', playerScore);
+            localStorage.setItem('wrongAnswers', wrongAnswersScore);
 
             answer = document.getElementsByClassName('answer');
             for (let i = 0; i < answer.length; i++) {
@@ -70,7 +99,14 @@ const setNewQuestions = () => {
         isFalseAnswerBtn.addEventListener('click', () => checkForAnswer(isFalseAnswerBtn.innerText))
 
         function handleNextQuestion() {
-            (index <= 19) ? nextQuestion(index) : endGame();
+            if (index <= 19) {
+                nextQuestion(index);
+            } else {
+                clearInterval(myTimer);
+                document.querySelector(".question_text").innerHTML = 'ИГРА ОКОНЧЕНА';
+                document.querySelectorAll(".hide").forEach((el)=>el.style.display = 'none');
+                document.querySelector('.timer').style.display="none";
+            }
             document.getElementsByClassName('question_content')[0].style.backgroundColor = "#DC5866";
             answer = document.getElementsByClassName('answer');
             for (let i = 0; i < answer.length; i++) {
@@ -78,11 +114,6 @@ const setNewQuestions = () => {
             }
         }
         nextBtn.addEventListener('click', handleNextQuestion);
-
-        function endGame() {
-            localStorage.setItem('rightAnswers', playerScore);
-            localStorage.setItem('wrongAnswers', wrongAnswersScore);
-        }
     } else {
         setTimeout(() => {
             setNewQuestions();

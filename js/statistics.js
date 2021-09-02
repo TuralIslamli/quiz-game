@@ -12,3 +12,22 @@ for (let i = 0; i < accordion.length; i++) {
     }
   });
 }
+
+/////////////////////////
+
+// function SetStatistics(games, rightAnswers, wrongAnswers) {
+//   this.games = games;
+//   this.rightAnswers = rightAnswers;
+//   this.wrongAnswers = wrongAnswers;
+//   this.rating = (this.rightAnswers*100)/(this.games*20); 
+
+// }
+
+// let scienceScore = setStatistics()
+
+
+// document.getElementsByClassName('science').onclick = function() {
+//    let category = localStorage.getItem('category');
+// }​;​
+
+
