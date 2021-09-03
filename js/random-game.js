@@ -1,3 +1,4 @@
+/* Select random questions */
 let randomBtn = document.getElementsByClassName("main__btn");
 const arrCtgr = [
     ["Science","Наука"],
@@ -21,3 +22,15 @@ function randomChoose(btn) {
     localStorage.setItem('category', myClass);
     localStorage.setItem('categoryİnRus', arrCtgr[randomNum][1]);
 }
+
+/* add quote of the day */
+setInterval(() => {
+    document.querySelector(".footer_quote").style.visibility = "visible";
+}, 1000);
+setInterval(() => {
+    $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=jsonp&jsonp=?")
+        .done((data) => {
+            quote.innerText = `“${data.quoteText}”`;
+            author.innerText = data.quoteAuthor || "Автор неизвестен.";
+    });
+}, 10000)

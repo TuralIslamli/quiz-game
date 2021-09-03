@@ -155,6 +155,7 @@ button {
 	-moz-box-flex: 0;
 	-ms-flex: 0 1 auto;
 	flex: 0 1 auto;
+	z-index: 10000;
 }
 @media (max-width: 767px) {
 	.header__account {
@@ -229,6 +230,7 @@ button {
 .main__title {
 	text-align: center;
 	font-size: 48px;
+	font-weight: 500;
 }
 
 .footer {
@@ -244,7 +246,6 @@ button {
 	align-items: center;
 	margin:0 auto;
     width: 80%;
-	/* border:1px solid yellow; */
 }
 
 .viktorin_items>div {
@@ -305,8 +306,6 @@ button {
 
 .viktorin_content {
 	padding:2em;
-	/* border:1px solid green; */
-	/*height: 445px;*/
 }
 
 .correct {
@@ -318,7 +317,7 @@ button {
 .correct p {
   color:#A43F3F;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 
@@ -327,6 +326,8 @@ button {
     border-radius: 10px;
     padding: 3em 0em;
 	border: 5px solid #A43F3F;
+    border-radius: 5px;
+    padding: 3em 1em;
 }
 
 .question_text {
@@ -345,10 +346,12 @@ button {
 }
 
 .question_buttons div a  {
-    display: inline-block;
+	display: block;
+    width: 150px;
+    text-align: center;
     text-decoration: none;
     border:4px solid white;
-    padding:0.3em 2.5em;
+    padding:0.3em 0;
     border-radius:30px;
     color:white;
 	font-size: 1.3em;
@@ -415,7 +418,6 @@ button {
 
 .timer {
 	font-weight: bold;
-	/*padding:1em 0;*/
 	text-align: center;
 	font-size: 2em;
 	color: #9F2633;
@@ -462,9 +464,6 @@ button {
 	display: flex;
 	flex-direction: column;
 }
-
-
-
 
 @keyframes turn_right {
 
@@ -580,9 +579,7 @@ button {
         98% {
         transform: translate(10px, 9px) rotate(1.5deg); }
         0%, 100% {
-        transform: translate(0, 0) rotate(0); } 
-   
-    
+        transform: translate(0, 0) rotate(0); }    
 }
 
 @keyframes fade {
@@ -597,8 +594,6 @@ button {
     }
 }
 
-
-
 @keyframes victorin_circle {
     0% {
         transform: scale(0.7);
@@ -609,7 +604,6 @@ button {
         transform: scale(1.2);
     }
 }
-
 
 @media (max-width: 944px) {
 	.header__burger {
@@ -766,4 +760,3 @@ button {
 	  height: 150px;
   }
 }
-
