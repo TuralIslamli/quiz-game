@@ -324,8 +324,9 @@ button {
 
 .question_content {
     background-color: #DC5866;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 3em 0em;
+	border: 5px solid #A43F3F;
 }
 
 .question_text {
@@ -386,6 +387,7 @@ button {
 .question_buttons div{
     padding:1.5em;
 }
+
 .blok {
     display: block;
     padding-top:2em;

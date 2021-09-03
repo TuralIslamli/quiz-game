@@ -11,7 +11,8 @@ document.body.appendChild(script);
 //     }
 ///////
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+    var timer = duration,
+        minutes, seconds;
     return myTimer = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
@@ -22,8 +23,8 @@ function startTimer(duration, display) {
         if (--timer < 0) {
             clearInterval(myTimer);
             document.querySelector(".question_text").innerHTML = 'ВРЕМЯ ВЫШЛО <br><br> ИГРА ОКОНЧЕНА';
-            document.querySelectorAll(".hide").forEach((el)=>el.style.display = 'none');
-            document.querySelector('.timer').style.display="none";
+            document.querySelectorAll(".hide").forEach((el) => el.style.display = 'none');
+            document.querySelector('.timer').style.display = "none";
         }
     }, 1000);
 }
@@ -35,6 +36,16 @@ const setNewQuestions = () => {
     let isFalseAnswerBtn = document.getElementById('isFalseAnswerBtn');
     let nextBtn = document.getElementById('next_btn');
 
+    isTrueAnswerBtn.addEventListener("click", function () {
+        nextBtn.style.color = "Indigo";
+        nextBtn.style.fontSize = "30px"
+    });
+
+    isFalseAnswerBtn.addEventListener("click", function () {
+        nextBtn.style.color = "Indigo";
+        nextBtn.style.fontSize = "30px"
+    });
+
     if (isArrayInStorage) {
         document.querySelector("h2").innerText = 'Выбранная категория: ' + localStorage.getItem('categoryİnRus');
         let questionNum = 1;
@@ -44,7 +55,7 @@ const setNewQuestions = () => {
         let arr = [];
         nextQuestion(0);
 
-        let fiveMinutes = 60*3;
+        let fiveMinutes = 60 * 3;
         let display = document.querySelector('.timer');
         startTimer(fiveMinutes, display);
 
@@ -100,12 +111,14 @@ const setNewQuestions = () => {
 
         function handleNextQuestion() {
             if (index <= 19) {
+                nextBtn.style.color = "white";
+                nextBtn.style.fontSize = "22px"
                 nextQuestion(index);
             } else {
                 clearInterval(myTimer);
                 document.querySelector(".question_text").innerHTML = 'ИГРА ОКОНЧЕНА';
-                document.querySelectorAll(".hide").forEach((el)=>el.style.display = 'none');
-                document.querySelector('.timer').style.display="none";
+                document.querySelectorAll(".hide").forEach((el) => el.style.display = 'none');
+                document.querySelector('.timer').style.display = "none";
             }
             document.getElementsByClassName('question_content')[0].style.backgroundColor = "#DC5866";
             answer = document.getElementsByClassName('answer');
