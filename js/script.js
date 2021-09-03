@@ -20,10 +20,15 @@ IntervalId = setInterval(function () {
 let quote = document.getElementById("quote");
 let author = document.getElementById("author");
 
-setInterval(() => {
-  $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=jsonp&jsonp=?")
+const getQuotes = () => {
+    $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=jsonp&jsonp=?")
     .done((data) => {
       quote.innerText = `“${data.quoteText}”`;
       author.innerText = data.quoteAuthor || "Автор неизвестен.";
     });
-}, 10000)
+}
+
+getQuotes();
+setInterval(() => {
+    getQuotes();
+}, 5000)

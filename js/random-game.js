@@ -27,10 +27,17 @@ function randomChoose(btn) {
 setInterval(() => {
     document.querySelector(".footer_quote").style.visibility = "visible";
 }, 1000);
-setInterval(() => {
+
+const getQuotes = () => {
     $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=jsonp&jsonp=?")
-        .done((data) => {
-            quote.innerText = `“${data.quoteText}”`;
-            author.innerText = data.quoteAuthor || "Автор неизвестен.";
+    .done((data) => {
+      console.log(data)
+      quote.innerText = `“${data.quoteText}”`;
+      author.innerText = data.quoteAuthor || "Автор неизвестен.";
     });
-}, 10000)
+}
+
+getQuotes();
+setInterval(() => {
+    getQuotes();
+}, 5000)
