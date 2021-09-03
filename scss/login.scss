@@ -1,26 +1,188 @@
 @import "_fonts";
 $c0:#ffffff;
 $c1:#DC5866;
+$c2:#000000;
 @import "_mixin";
 @import "_nullstyle";
 .main{
     flex: 1 1 auto;
     padding: 20px;
     &__body{
-        position:relative;
         display: flex;
-    }
-    &__title{
-        text-align: center;
-        font-size: 48px;
-        padding: 50px 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 0;
     }
     &__block{
+        position:relative;
+        min-height: 600px;
         flex: 50%;
+        align-self: center;
+        animation: scale 2s 1;
+        &:first-of-type{
+            z-index: 1;
+        }
     }
     &__form{
-        background-color: blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include transition;
+        &:first-of-type{
+            &.left{
+                animation: moveLeftFirst 1s forwards;
+            }
+            &.right{
+                animation: moveRightFirst 1s forwards;
+            }
+        }
+        &:last-of-type{
+            display: none;
+            &.left{
+                display: flex;
+                animation: moveLeftLast 1s forwards;
+            }
+            &.right{
+                display: flex;
+                animation: moveRightLast 1s forwards;
+            }
+        }
+    }
+    &__title{
+        @include adaptive-font(48,30);
+    }
+    &__img{
+        text-align: center;
+        img{
+            border-radius: 20px;
+            max-width: 100%;
+        }
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $c0;
+    margin: 20px 0;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    line-height: 0;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px 0px rgba($color: $c2, $alpha: .2);
+    &__icon{
+        align-self: center;
+		overflow: hidden;
+        display: flex;
+        justify-content: center;
+		img{
+			max-width: 50%;
+			display: block;
+		}
+    }
+    &__txt{
+        color: $c2;
+        font-size: 12px;
+        text-align: center;
+        margin: 10px 0;
+    }
+    &__link{
+        color: $c1;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    p{
+        color: $c2;
+        margin: 20px 0 0;
+    }
+    input, button{
+        margin: 10px 0 0;
+        padding: 5px 15px;
+    }
+    input{
+        background-color: #F6F7FB;
+        border: 1px solid #DCDCDC;
+        border-radius: 5px;
+        &::placeholder{
+            color: #DCDCDC;
+        }
+        &[type="radio"] {
+            display:none;
+            & + label{
+                color: $c1;
+                cursor:pointer;
+                & span{
+                    display:inline-block;
+                    width:15px;
+                    height:15px;
+                    margin: 0 10px;
+                    vertical-align: middle;
+                    background-image: url("../img/unchecked.svg");
+                    background-size: cover;
+                }
+            }
+            &:checked + label{
+                & span{
+                    background-image: url("../img/checked.svg");
+                }
+            }
+        }
+        &[type="date"]{
+            background-image: url("../img/calendar.svg");
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: 95% 50%;
+            &::-webkit-calendar-picker-indicator{
+                background-image: none;
+            }
+        }
+    }
+    button{
+        @include adaptive-font(24,20);
+        font-weight: 700;
+        color: $c0;
+        background-color: $c1;
+        border-radius: 5px;
+        &:hover{
+            box-shadow: 0 0 5px 5px rgba($color: $c2, $alpha: 0.2);
+        }
     }
 }
 @import "_footer";
-@import "_media";
+@import "_keyframes";
+@media (max-width: 767px) {
+    .main{
+        &__block{
+            flex: 100%;
+            &:first-of-type{
+                order: 2;
+            }
+            &:last-of-type{
+                order: 1;
+                min-height: auto;
+            }
+        }
+        &__title{
+            padding: 20px 0 0;
+            text-align: center;
+        }
+        &__img{
+            img{
+                border-radius: 10px;
+                max-width: 50%;
+            }
+        }
+    }
+    .form{
+        margin: 0 auto;
+    }
+}

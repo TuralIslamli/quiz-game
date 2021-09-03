@@ -1,16 +1,251 @@
 @import "_fonts";
 $c0:#ffffff;
 $c1:#DC5866;
+$c2:#000000;
 @import "_mixin";
 @import "_nullstyle";
 @import "_header";
-.main{
+
+.wrapper {
+	min-height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background-image: url("../img/pattern.png");
+	background-repeat: repeat-x;
+	background-position: 50% 100%;
+}
+
+.main {
+    background-color: $c0;
     flex: 1 1 auto;
-    padding: 100px 20px 10px;
-    &__title{
-        text-align: center;
-        font-size: 48px;
+    display: flex;
+    border: 8px solid #E5828C;
+    border-radius: 48px;
+    height: 75vh;
+    margin: 100px 20px 10px;
+    align-items: center;
+    overflow: hidden;
+
+    &__text {
+        flex: 0.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3% 0 3% 5%;
+        animation: scale 2s 1;
+    }
+
+    &__image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        animation: scale 2s 1;
     }
 }
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 20px;
+
+    background: linear-gradient(to left, #b49cf1, #D62229, $c1);
+    color: transparent;
+    background-clip: text;
+    animation: animate-text;
+    animation-delay: 0;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    transition: font-size 500ms ease-in-out;
+        
+    @keyframes animate-text {
+        100% {
+            background-position: 2000px 0;
+        }
+    }
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+#form {
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	align-self: center;
+    width: 100%;
+}
+
+label,
+::placeholder {
+	color: #736A92;
+	font-size: 20px;
+}
+
+.email,
+textarea {
+	font-size: 20px;
+	background-color: #F6F7FB;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.email {
+	height: 60px;
+}
+
+textarea {
+	height: 200px;
+}
+
+.send {
+	width: 100%;
+	background-color: #DC5866;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+    font-weight: 700;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0);
+    }
+}
+
+@media screen and (max-height: 720px) {
+    textarea {
+        height: 150px;
+    }
+}
+
+@media screen and (max-height: 620px) {
+    .email {
+        height: 40px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1016px) {
+    .main {
+        flex-direction: column-reverse;
+        height: auto;
+
+        div {
+            width: 100%;
+        }
+
+        &__text {
+            padding: 7%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .main {
+        border-width: 6px;
+        border-radius: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 495px) {
+    .main {
+        justify-content: space-around;
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .main {
+        justify-content: center;
+
+        &__image {
+            padding-top: 0;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
 @import "_footer";
 @import "_media";

@@ -1,73 +1,34 @@
-   let count=5;
-   var IntervalId;
-   var timerId;
-   let seconds=60;
-   let minutes=2;
-   isShake=false;
-   isTurn=false;
+let count = 5;
+var IntervalId;
+var timerId;
+let seconds = 60;
+let minutes = 2;
+isShake = false;
+isTurn = false;
 
-   
-   IntervalId=setInterval(function() {  
-    count=count-1;
-    document.querySelector(".seconds_till").textContent=count;
+IntervalId = setInterval(function () {
+  count = count - 1;
+  document.querySelector(".seconds_till").textContent = count;
+  if (count === 0) {
+    clearInterval(IntervalId);
+    document.querySelector('.viktorin_timer').style.display = "none";
+    document.querySelector('.viktorin_question').className = "blok appear";
+    document.querySelector(".footer_quote").style.visibility = "visible";
+  }
+}, 1000)
 
-    if(count===0) {
-        clearInterval(IntervalId);
-        
-        document.querySelector('.viktorin_timer').style.display="none";
-        document.querySelector('.viktorin_question').className="blok appear";
-       // document.querySelector('.viktorin_question').classList.add('appear');  
-      
-       
-    }
-   
-  },1000)
+let quote = document.getElementById("quote");
+let author = document.getElementById("author");
 
- setTimeout(TimerQuiz,5000);
+const getQuotes = () => {
+    $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=jsonp&jsonp=?")
+    .done((data) => {
+      quote.innerText = `“${data.quoteText}”`;
+      author.innerText = data.quoteAuthor || "Автор неизвестен.";
+    });
+}
 
- function TimerQuiz() {
-  
-  timerId=setInterval(function() {
-  
-   
-    if(seconds === 0) {
-      minutes=minutes-1;
-      if(minutes === -1){
-        alert("Time out");
-        clearInterval(timerId);
-        return;
-      }else {
-        seconds=60;
-      }
-    }
-      
-    seconds=seconds-1;
-    document.querySelector('.timer').textContent=`${minutes}:${seconds>9 ?'':'0'}${seconds}`;
-
- },1000);
-  
-} 
-
-  document.querySelector('.red').addEventListener('click',function(){
-
-    document.querySelector('.question_content').className="question_content"
-    void document.querySelector('.question_content').offsetWidth;
-    document.querySelector('.question_content').classList.add("shake");
-
-  })
-
-  document.querySelector('.green').addEventListener('click',function(){
-   // e.preventDefault();
-    document.querySelector('.question_content').className="question_content"
-  
-    void document.querySelector('.question_content').offsetWidth;
-    document.querySelector('.question_content').classList.add("turn");
-    
-
-  })
-
-  
- 
-
-
-
+getQuotes();
+setInterval(() => {
+    getQuotes();
+}, 5000)

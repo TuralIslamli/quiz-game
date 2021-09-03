@@ -1,0 +1,248 @@
+const questionsOfSport = [
+    [
+        {
+            id: 1,
+            title: "Великий футбольный вратарь Лев Яшин выигрывал Кубок СССР по хоккею с шайбой",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 2,
+            title: "Теннисистка Серена Уильямс сыграла одну из главных ролей в фильме «Форсаж 9», который вышел в апреле 2021 года",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 3,
+            title: "Легендарный бразильский футболист Ривалдо распилил «Золотой мяч», полученный им в 1999 году",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 4,
+            title: "Самый вместительный в мире футбольный стадион находится в Северной Корее",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 5,
+            title: "Британскую актрису Киру Найтли назвали в честь советской фигуристки Киры Ивановой, бронзового призера Олимпиады в Сараево (1984)",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 6,
+            title: "Роналду – не фамилия капитана сборной Португалии, а второе имя, которое он получил в честь президента США Рональда Рейгана",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 7,
+            title: "В мяче для гольфа целый 238 дырочек",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 8,
+            title: "Профессиональные велосипедисты во время гонок используют памперсы",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 9,
+            title: "Вратарь и капитан ЦСКА Игорь Акинфеев начинал карьеру в школе «Спартака»",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 10,
+            title: "В Финляндии существует футбольный клуб с названием «Санта-Клаус»",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 11,
+            title: "Существует ли такой вид спорта как хоккей на траве",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 12,
+            title: "Существует ли такая разновидность поло, как поло на слонах",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 13,
+            title: "Существует ли вид спорта, суть которого заключается в боях верблюдов за самку",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 14,
+            title: "Для пляжного волейбола не предусмотрены температурные нормы",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 15,
+            title: "Снукер - это одна из разновидностей бильярда",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 16,
+            title: "Масса мячика для игры в настольный теннис составляет меньше 2 грамм",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 17,
+            title: "Бразилия - это единственная страна, участвовавшая во всех чемпионатах мира по футболу",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 18,
+            title: "Бокс был узаконен как вид спорта только в 1920 году",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 19,
+            title: "Усейн Болт является вторым спортсменом, которому удалось выиграть спринтерские дистанции 100 и 200 метров на двух Олимпиадах подряд",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 20,
+            title: "Первые Олимпийские игра были проведены в 776 г. до н.э.",
+            isShowed: false,
+            isCorrect: true,
+        },
+    ],
+    [
+        {
+            id: 1,
+            title: "Древние греки участвовали в олимпиаде совершенно голые",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 2,
+            title: "Победителям кубка Стэнли вручается копия кубка",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 3,
+            title: "В дзюдо всего 10 данов",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 4,
+            title: "Включены ли соревнования по шахматам в олимпийские игры",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 5,
+            title: "Возможен ли в баскетболе исход игры «ничья»",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 6,
+            title: "Спортсмену для прыжка в высоту с разбега на каждом новом уровне планки дается всего две попытки",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 7,
+            title: "Бобслей — это санный вид спорта",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 8,
+            title: "Голкипер — это тоже самое, что и вратарь",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 9,
+            title: "Криштиану Роналду — это футболист",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 10,
+            title: "На футбольном поле двое ворот",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 11,
+            title: "Пирсинг — это вид спорта",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 12,
+            title: "Художественная борьба — это олимпийский вид спорта",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 13,
+            title: "Канада считается родиной хоккея с шайбой",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 14,
+            title: "Первые европейские игры были а Баку",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 15,
+            title: "Летние Олимпийские игры 2008 года проходили в Токио",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 16,
+            title: "Майкл Фелпс - американский пловец, абсолютный  рекордсмен по количеству золотых наград (23) и наград в сумме (28) в истории Олимпийских игр, а также золотых наград (26) и наград в сумме (33) в истории чемпионатов мира по водным видам спорта",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 17,
+            title: "Лионель Месси сейчас играет в «Барселоне»",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 18,
+            title: "Шахматную партию начинают только пешкой",
+            isShowed: false,
+            isCorrect: false,
+        },
+        {
+            id: 19,
+            title: "Бейсбол - это спортивная игра с мячом и битой",
+            isShowed: false,
+            isCorrect: true,
+        },
+        {
+            id: 20,
+            title: "Майк Тайсон так же отличился, став самым молодым чемпионом мира",
+            isShowed: false,
+            isCorrect: true,
+        }
+    ]
+];
+
+localStorage.setItem('arrayOfQuestions', JSON.stringify(questionsOfSport[Math.floor(Math.random() * 2)]));

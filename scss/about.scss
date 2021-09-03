@@ -1,14 +1,36 @@
 @import "_fonts";
 $c0:#ffffff;
 $c1:#DC5866;
+$c2:#000000;
 @import "_mixin";
 @import "_nullstyle";
 @import "_header";
-.main{
+
+.wrapper {
+	min-height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background-image: url("../img/pattern.png");
+	background-repeat: repeat-x;
+	background-position: 50% 100%;
+}
+
+.main {
+    background-color: $c0;
     flex: 1 1 auto;
     display: flex;
     border: 8px solid #E5828C;
-    border-radius: 78px;
+    border-radius: 48px;
     height: 75vh;
     margin: 100px 20px 10px;
     align-items: center;
@@ -41,25 +63,11 @@ $c1:#DC5866;
     p {
         font-size: 30px;
         font-weight: 500;
-        //1
-        // background: linear-gradient(to left, #b49cf1, #D62229, #E97639, #792042);
-        // // background-size: 3200px 200px;
-        // color: transparent;
-        // background-clip: text;
-        // animation: animate-text;
-        // animation-delay: 0;
-        // animation-duration: 7s;
-        // animation-timing-function: linear;
-        // animation-iteration-count: infinite;
-        // animation-fill-mode: forwards;
-        // transition: font-size 500ms ease-in-out;
 
-        //2
         span {
             $animationSteps: 50;
             $animationElementsCount: 500;
             $delayBetweenLetters: 0.2;
-
             animation-name: text-flow;
             animation-duration: 20s;
             animation-iteration-count: infinite;
@@ -82,25 +90,9 @@ $c1:#DC5866;
                 }
             }
         }
-
-        //3
-        // //  background: linear-gradient(to left, #b49cf1 20%, #D62229 30%, #E97639 70%);
-        // background: linear-gradient(to left, #b49cf1, #D62229, #E97639);
-        // background-clip: text;
-        // -webkit-text-fill-color: transparent;
-        // background-size: 200% auto;
-        // animation: textShine 7s ease-in-out infinite;
-
-        // @keyframes textShine {
-        //     to {
-        //         background-position: 200%;
-        //     }
-        // }
     }
 
     img {
-        // width: auto;
-        // height: 100%;
         width: 100%;
         height: auto;
         animation: scale 2s 1;
@@ -119,7 +111,6 @@ $c1:#DC5866;
 
 @media screen and (max-width: 1290px) {
     img {
-        //max-height: 90%;
         width: 100%;
         height: auto;
     }
@@ -127,7 +118,6 @@ $c1:#DC5866;
 
 @media screen and (max-width: 1132px) {
     img {
-        //max-height: 80%;
         width: 100%;
         height: auto;
     }
@@ -164,21 +154,11 @@ $c1:#DC5866;
 @media screen and (max-width: 705px) {
     .main {
         border-width: 6px;
-        border-radius: 50px;
+        border-radius: 40px;
 
         img {
-            // max-width: 85%;
-            // height: auto;
             width: 100%;
             height: auto;
-        }
-
-        h1 {
-            font-size: 30px;
-        }
-
-        p {
-            font-size: 20px;
         }
     }
 }
@@ -222,8 +202,5 @@ $c1:#DC5866;
     }
 }
 
-// @keyframes animate-text {
-//     100% {
-//         background-position: 2000px 0;
-//     }
-// }
+@import "_footer";
+@import "_media";
